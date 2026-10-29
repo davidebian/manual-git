@@ -7,32 +7,32 @@
 
 ---
 
-# Índice
+## Índice
 
-1. Introducción a Git
-2. Diferencias entre Git y GitHub
-3. Instalación de Git
-4. Configuración inicial
-5. Conceptos fundamentales
-6. Creación de un repositorio
-7. Gestión de archivos
-8. Área de preparación (Staging Area)
-9. Commits e historial
-10. Ramas (Branches)
-11. Fusionar ramas (Merge)
-12. Deshacer cambios
-13. Repositorios remotos
-14. Subir proyectos a GitHub
-15. Clonar repositorios
-16. Actualizar repositorios
-17. Archivo .gitignore
-18. Buenas prácticas
-19. Comandos esenciales
-20. Ejercicio práctico final
+- [1. Introducción a Git](#1-introducción-a-git)
+- [2. Diferencias entre Git y GitHub](#2-diferencias-entre-git-y-github)
+- [3. Instalación de Git](#3-instalación-de-git)
+- [4. Configuración inicial](#4-configuración-inicial)
+- [5. Conceptos fundamentales](#5-conceptos-fundamentales)
+- [6. Creación de un repositorio](#6-creación-de-un-repositorio)
+- [7. Gestión de archivos](#7-gestión-de-archivos)
+- [8. Área de preparación (Staging Area)](#8-área-de-preparación-staging-area)
+- [9. Commits e historial](#9-commits-e-historial)
+- [10. Ramas (Branches)](#10-ramas-branches)
+- [11. Fusionar ramas (Merge)](#11-fusionar-ramas-merge)
+- [12. Deshacer cambios](#12-deshacer-cambios)
+- [13. Repositorios remotos](#13-repositorios-remotos)
+- [14. Subir proyectos a GitHub](#14-subir-proyectos-a-github)
+- [15. Clonar repositorios](#15-clonar-repositorios)
+- [16. Actualizar repositorios](#16-actualizar-repositorios)
+- [17. Archivo .gitignore](#17-archivo-gitignore)
+- [18. Buenas prácticas](#18-buenas-prácticas)
+- [19. Comandos esenciales](#19-comandos-esenciales)
+- [20. Ejercicio práctico final](#20-ejercicio-práctico-final)
 
 ---
 
-# 1. Introducción a Git
+## 1. Introducción a Git
 
 Git es un sistema de control de versiones distribuido que permite registrar los cambios realizados en los archivos de un proyecto.
 
@@ -49,22 +49,22 @@ Git es especialmente utilizado en el desarrollo de software, administración de 
 - Permite conocer quién realizó cada modificación.
 - Funciona localmente sin necesidad de conexión a Internet.
 
-# 2. Diferencias entre Git y GitHub
+## 2. Diferencias entre Git y GitHub
 
 Aunque suelen utilizarse conjuntamente, son herramientas diferentes.
 
-| Git | GitHub |
-|---|---|
+|Git                               |GitHub                                      |
+|----------------------------------|--------------------------------------------|
 | Sistema de control de versiones. | Plataforma de alojamiento de repositorios. |
-| Se instala en el ordenador. | Se utiliza principalmente desde Internet. |
-| Gestiona versiones y cambios. | Permite compartir proyectos. |
-| Funciona sin conexión. | Necesita conexión para sincronizar. |
+| Se instala en el ordenador.      | Se utiliza principalmente desde Internet.  |
+| Gestiona versiones y cambios.    | Permite compartir proyectos.               |
+| Funciona sin conexión.           | Necesita conexión para sincronizar.        |
 
 GitHub permite alojar repositorios Git y facilita el trabajo colaborativo mediante herramientas como Pull Requests, Issues y revisiones de código.
 
 Web oficial: [https://github.com](https://github.com)
 
-# 3. Instalación de Git
+## 3. Instalación de Git
 
 En Debian podemos instalar Git utilizando el gestor de paquetes APT.
 
@@ -86,7 +86,7 @@ Comprobamos la versión instalada:
 git --version
 ```
 
-# 4. Configuración inicial
+## 4. Configuración inicial
 
 Antes de empezar a utilizar Git debemos configurar nuestra identidad.
 
@@ -116,7 +116,7 @@ git config --list
 
 El parámetro `--global` indica que la configuración se aplicará a todos los repositorios del usuario.
 
-# 5. Conceptos fundamentales
+## 5. Conceptos fundamentales
 
 Git trabaja con diferentes estados y áreas que debemos conocer.
 
@@ -155,7 +155,7 @@ Remote Repository
      (GitHub)
 ```
 
-# 6. Creación de un repositorio
+## 6. Creación de un repositorio
 
 Para crear un proyecto nuevo primero creamos su directorio:
 
@@ -195,7 +195,7 @@ Para cambiar el nombre de la rama inicial a `main`:
 git branch -m main
 ```
 
-# 7. Gestión de archivos
+## 7. Gestión de archivos
 
 Git permite realizar el seguimiento de los archivos de un proyecto.
 
@@ -221,7 +221,7 @@ git status
 
 Git mostrará el archivo como `untracked`, es decir, todavía no está incluido en el seguimiento del repositorio.
 
-# 8. Área de preparación (Staging Area)
+## 8. Área de preparación (Staging Area)
 
 Para indicar a Git qué archivos queremos incluir en el siguiente commit utilizamos `git add`.
 
@@ -251,7 +251,7 @@ Para retirar un archivo del área de preparación sin eliminarlo del directorio 
 git restore --staged README.md
 ```
 
-# 9. Commits e historial
+## 9. Commits e historial
 
 Un commit es una instantánea de los cambios preparados en un momento determinado.
 
@@ -298,7 +298,7 @@ Actualizar configuración del proyecto
 Añadir script de instalación
 ```
 
-# 10. Ramas (Branches)
+## 10. Ramas (Branches)
 
 Las ramas permiten desarrollar nuevas funcionalidades o realizar modificaciones sin alterar directamente la rama principal.
 
@@ -340,7 +340,7 @@ Eliminar una rama local:
 git branch -d desarrollo
 ```
 
-# 11. Fusionar ramas (Merge)
+## 11. Fusionar ramas (Merge)
 
 Cuando terminamos el trabajo de una rama podemos integrar sus cambios en otra.
 
@@ -371,7 +371,7 @@ git add archivo-modificado
 git commit -m "Resolver conflicto de fusion"
 ```
 
-# 12. Deshacer cambios
+## 12. Deshacer cambios
 
 Git dispone de diferentes comandos para recuperar versiones o descartar modificaciones.
 
@@ -423,7 +423,7 @@ git reset --hard HEAD~1
 
 Deshace el último commit y descarta los cambios correspondientes. Debe utilizarse con precaución.
 
-# 13. Repositorios remotos
+## 13. Repositorios remotos
 
 Un repositorio remoto es una copia del proyecto alojada en otro servidor.
 
@@ -447,7 +447,7 @@ Para cambiar su dirección:
 git remote set-url origin NUEVA_URL
 ```
 
-# 14. Subir proyectos a GitHub
+## 14. Subir proyectos a GitHub
 
 Para publicar un proyecto local en GitHub debemos crear primero un repositorio vacío desde la plataforma.
 
@@ -489,7 +489,7 @@ Podemos utilizar:
 
 Documentación oficial: [https://docs.github.com](https://docs.github.com)
 
-# 15. Clonar repositorios
+## 15. Clonar repositorios
 
 Clonar permite descargar una copia completa de un repositorio remoto.
 
@@ -505,7 +505,7 @@ Para clonar en un directorio con un nombre diferente:
 git clone https://github.com/usuario/proyecto.git mi-proyecto
 ```
 
-# 16. Actualizar repositorios
+## 16. Actualizar repositorios
 
 Cuando trabajamos con un repositorio remoto es necesario sincronizar los cambios.
 
@@ -533,7 +533,7 @@ git push
 
 Es importante actualizar el repositorio antes de trabajar cuando otras personas también realizan modificaciones.
 
-# 17. Archivo .gitignore
+## 17. Archivo .gitignore
 
 El archivo `.gitignore` permite indicar qué archivos o directorios no queremos que Git incluya en el seguimiento.
 
@@ -570,7 +570,7 @@ De esta forma Git ignorará los archivos que coincidan con estos patrones, siemp
 
 **Importante:** `.gitignore` no elimina archivos que ya están versionados.
 
-# 18. Buenas prácticas
+## 18. Buenas prácticas
 
 Para trabajar correctamente con Git es recomendable seguir algunas pautas:
 
@@ -583,28 +583,28 @@ Para trabajar correctamente con Git es recomendable seguir algunas pautas:
 - Utilizar `.gitignore` para excluir archivos innecesarios.
 - Evitar utilizar `git reset --hard` sin comprobar previamente sus consecuencias.
 
-# 19. Comandos esenciales
+## 19. Comandos esenciales
 
-| Comando | Función |
-|---|---|
-| `git init` | Inicializa un repositorio. |
-| `git clone` | Clona un repositorio remoto. |
-| `git status` | Consulta el estado del repositorio. |
-| `git add` | Añade archivos al área de preparación. |
-| `git commit` | Registra una nueva versión. |
-| `git log` | Consulta el historial. |
-| `git diff` | Muestra diferencias entre cambios. |
-| `git branch` | Consulta y gestiona ramas. |
-| `git switch` | Cambia de rama. |
-| `git merge` | Fusiona ramas. |
-| `git restore` | Recupera archivos. |
+| Comando      | Función                                   |
+|--------------|-------------------------------------------|
+| `git init`   | Inicializa un repositorio.                |
+| `git clone`  | Clona un repositorio remoto.              |
+| `git status` | Consulta el estado del repositorio.       |
+| `git add`    | Añade archivos al área de preparación.    |
+| `git commit` | Registra una nueva versión.               |
+| `git log`    | Consulta el historial.                    |
+| `git diff`   | Muestra diferencias entre cambios.        |
+| `git branch` | Consulta y gestiona ramas.                |
+| `git switch` | Cambia de rama.                           |
+| `git merge`  | Fusiona ramas.                            |
+| `git restore`| Recupera archivos.                        |
 | `git revert` | Deshace cambios mediante un nuevo commit. |
-| `git remote` | Gestiona repositorios remotos. |
-| `git push` | Envía cambios al remoto. |
-| `git pull` | Descarga e integra cambios. |
-| `git fetch` | Descarga referencias remotas. |
+| `git remote` | Gestiona repositorios remotos.            |
+| `git push`   | Envía cambios al remoto.                  |
+| `git pull`   | Descarga e integra cambios.               |
+| `git fetch`  | Descarga referencias remotas.             |
 
-# 20. Ejercicio práctico final
+## 20. Ejercicio práctico final
 
 Vamos a realizar un ejercicio que reúne los conceptos principales del curso.
 
@@ -705,7 +705,7 @@ Comprobamos que el proyecto aparece correctamente en GitHub.
 
 ---
 
-# Recursos de aprendizaje
+## Recursos de aprendizaje
 
 - [Documentación oficial de Git](https://git-scm.com/doc)
 - [Libro oficial Pro Git](https://git-scm.com/book/es/v2)
